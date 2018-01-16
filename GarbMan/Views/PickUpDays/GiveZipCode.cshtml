@@ -1,0 +1,22 @@
+﻿@model GarbMan.Models.ZipCheck
+
+@{
+    ViewBag.Title = "GiveZipCode";
+}
+
+<h2>Enter Your Route's Zip Code</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+}
+<div class="form-horizontal">
+    
+    <hr />
+    @using (Html.BeginForm("OscarsRoute", "PickUpDays"))
+    {
+        @Html.EditorFor(model => Model.Zip, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ActionLink("Submit", "OscarsRoute", Model.Zip, "PickUpDays")
+        
+    }
+    </div>

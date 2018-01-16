@@ -1,0 +1,37 @@
+﻿@model GarbMan.Models.PickUpDaysModels
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Your Current Pickup details</h2>
+
+<p>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Your PickupPlan™ for:
+        </th>
+        <th>
+            Next month's statement.
+        </th>
+    </tr>
+    
+
+    <tr>
+        <td>
+           @Html.DisplayFor(modelItem => Model.AddressNum) @Html.DisplayFor(modelItem => Model.Address)
+        </td>
+        <td>
+            $@Html.DisplayFor(modelItem => Model.Balance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=Model.Id })
+        </td>
+    </tr>
+
+
+</table>
+<tr>Return home</tr>
+<tr><p><a class="btn btn-default" href="@Url.Action("Index","Home")">&raquo;&raquo;&raquo;</a></p></tr>

@@ -29,5 +29,9 @@ namespace GarbMan.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<GarbMan.Models.PickUpDaysModels> PickUpDaysModels { get; set; }
+
+        public System.Data.Entity.DbSet<GarbMan.Models.ZipCheck> ZipChecks { get; set; }
     }
 }

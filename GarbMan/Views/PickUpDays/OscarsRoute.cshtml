@@ -1,0 +1,53 @@
+﻿@model List<GarbMan.Models.PickUpDaysModels>
+
+
+@{
+    ViewBag.Title = "OscarsRoute";
+}
+
+<h2>Oscars Route</h2>
+
+
+<table class="table">
+    <tr>
+        
+       
+        <th>
+           City 
+        </th>
+        <th>
+           Zip 
+        </th>
+        <th>
+           Address
+        </th>
+        <th>
+           Pick Up Day 
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddressNum) @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PickUpDay)
+        </td>
+    </tr>
+}
+    
+
+</table>
+<tr>
+    <p><a class="btn btn-default" href="@Url.Action("ApiTest","PickUpDays")">&raquo;&raquo;&raquo;</a></p>
+</tr>

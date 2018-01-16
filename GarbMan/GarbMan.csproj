@@ -198,12 +198,29 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PickUpDaysController.cs" />
+    <Compile Include="Controllers\ZipChecksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801081802519_REdo.cs" />
+    <Compile Include="Migrations\201801081802519_REdo.Designer.cs">
+      <DependentUpon>201801081802519_REdo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801112117577_ZipModelAdded.cs" />
+    <Compile Include="Migrations\201801112117577_ZipModelAdded.Designer.cs">
+      <DependentUpon>201801112117577_ZipModelAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801112134301_asdf.cs" />
+    <Compile Include="Migrations\201801112134301_asdf.Designer.cs">
+      <DependentUpon>201801112134301_asdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PickUpDaysModels.cs" />
+    <Compile Include="Models\ZipCheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -267,6 +284,19 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\PickUpDays\Create.cshtml" />
+    <Content Include="Views\PickUpDays\Delete.cshtml" />
+    <Content Include="Views\PickUpDays\Details.cshtml" />
+    <Content Include="Views\PickUpDays\Edit.cshtml" />
+    <Content Include="Views\PickUpDays\Index.cshtml" />
+    <Content Include="Views\PickUpDays\OscarsRoute.cshtml" />
+    <Content Include="Views\PickUpDays\GiveZipCode.cshtml" />
+    <Content Include="Views\ZipChecks\Create.cshtml" />
+    <Content Include="Views\ZipChecks\Delete.cshtml" />
+    <Content Include="Views\ZipChecks\Details.cshtml" />
+    <Content Include="Views\ZipChecks\Edit.cshtml" />
+    <Content Include="Views\ZipChecks\Index.cshtml" />
+    <Content Include="Views\PickUpDays\ApiTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,6 +308,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801081802519_REdo.resx">
+      <DependentUpon>201801081802519_REdo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801112117577_ZipModelAdded.resx">
+      <DependentUpon>201801112117577_ZipModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801112134301_asdf.resx">
+      <DependentUpon>201801112134301_asdf.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
